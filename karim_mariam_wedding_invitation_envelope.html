@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#241a20"><title>كريم & مريم | دعوة زفاف</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
+:root{--gold:#d9b878;--cream:#f8f0e5;--ink:#241a20}*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--cream);font-family:Cairo, sans-serif;min-height:100vh}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:36px 20px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#6d4a4b 0,#35252e 43%,#1b151b 100%)}.hero:before,.hero:after{content:'✦';position:absolute;color:#d9b87855;font-size:180px;animation:float 7s ease-in-out infinite}.hero:before{top:8%;right:8%}.hero:after{bottom:5%;left:8%;font-size:130px;animation-delay:-3s}@keyframes float{50%{transform:translateY(-18px) rotate(18deg)}}.frame{width:min(760px,100%);border:1px solid #d9b87899;padding:clamp(28px,7vw,70px) 20px;position:relative;background:#21182066;box-shadow:0 20px 80px #0005}.frame:before,.frame:after{content:'❧';position:absolute;color:var(--gold);font-size:34px}.frame:before{top:8px;right:14px}.frame:after{bottom:8px;left:14px;transform:rotate(180deg)}.eyebrow{letter-spacing:3px;color:var(--gold);font-size:13px}.names{font-family:Amiri,serif;font-size:clamp(48px,10vw,90px);line-height:1.4;margin:20px 0 4px;color:#f8e9ca}.amp{color:var(--gold);font-size:.65em}.subtitle{font-family:Amiri,serif;font-size:25px;margin:0 0 28px;color:#ead8b9}.rule{width:90px;height:1px;background:var(--gold);margin:25px auto}.date{font-size:21px;font-weight:700;color:var(--gold)}.details{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:24px 0}.detail{min-width:130px;padding:12px 20px;border:1px solid #d9b87866;background:#ffffff08}.detail small{display:block;color:#d9c9b0;margin-bottom:5px}.detail strong{font-size:19px}.countdown{display:flex;gap:10px;justify-content:center;direction:ltr;margin:25px 0}.unit{min-width:65px;padding:10px 8px;background:#ffffff0b;border:1px solid #d9b87855}.unit b{display:block;font-size:25px;color:var(--gold)}.unit span{font-size:11px;color:#d9c9b0}.invite{font-size:15px;line-height:2;color:#f0e4d2}.venue{padding:65px 20px;text-align:center;background:#f6efe5;color:#33252a}.venue h2{font-family:Amiri,serif;font-size:34px;color:#65464a;margin:0 0 8px}.venue p{line-height:1.9}.venue-name{font-size:23px;font-weight:800;color:#8a6740}.map{display:inline-block;margin-top:12px;padding:12px 25px;border:1px solid #8a6740;color:#65464a;text-decoration:none;border-radius:30px;transition:.2s}.map:hover{background:#65464a;color:white}.footer{padding:28px;text-align:center;color:#d9b878;font-family:Amiri,serif;font-size:23px;background:#1b151b}.note{font-size:12px;color:#a99a8d;margin-top:20px}
+
+/* Opening envelope */
+body.locked{overflow:hidden}
+.intro{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 35%,#76545a 0,#392831 52%,#171218 100%);transition:opacity 1s ease,visibility 1s ease}
+.intro.gone{opacity:0;visibility:hidden;pointer-events:none}
+.intro-inner{text-align:center;width:min(440px,100%);animation:introRise 1.1s both}
+.intro-kicker{color:#e7cc9b;letter-spacing:2px;font-size:13px;margin-bottom:28px}
+.intro-names{font:34px Amiri,serif;color:#f8e9ca;margin:0 0 7px}
+.envelope-button{border:0;background:transparent;cursor:pointer;padding:0;width:min(320px,82vw);height:220px;position:relative;filter:drop-shadow(0 22px 25px #0008);perspective:900px}
+.envelope{position:absolute;inset:35px 0 0;height:175px;background:linear-gradient(145deg,#f6e8d1,#d9bd91);border-radius:5px;overflow:visible}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(32deg,transparent 49.5%,#c5a477 50%,transparent 50.6%),linear-gradient(-32deg,transparent 49.5%,#e9d6b6 50%,transparent 50.6%);z-index:2}
+.envelope:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#ead8b9,#c9a878);clip-path:polygon(0 100%,50% 42%,100% 100%);z-index:3}
+.flap{position:absolute;left:0;top:0;width:100%;height:105px;background:linear-gradient(160deg,#f8eddc,#d6b98b);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s ease;z-index:4}
+.seal{position:absolute;z-index:5;left:50%;top:105px;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#f0d9a5,#9e713d);color:#fff4d8;font:25px Georgia;box-shadow:0 3px 9px #61432288}
+.envelope-letter{position:absolute;z-index:1;left:9%;top:12px;width:82%;height:140px;background:#fffaf0;color:#795b42;display:grid;place-items:center;font:25px Amiri,serif;transition:transform 1s ease .25s}
+.envelope-button.open .flap{transform:rotateX(180deg);z-index:0}
+.envelope-button.open .envelope-letter{transform:translateY(-105px)}
+.envelope-button.open .seal{opacity:0;transition:opacity .25s}
+.tap-hint{color:#f5e7d0;font-size:14px;margin-top:28px;animation:pulse 1.8s infinite}
+@keyframes introRise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{50%{opacity:.5;transform:translateY(-3px)}}
+.petal{position:fixed;top:-30px;z-index:8;pointer-events:none;color:#f0c9ce;text-shadow:0 2px 8px #fff5;animation:petalFall linear forwards}
+@keyframes petalFall{to{transform:translate3d(var(--drift),110vh,0) rotate(680deg);opacity:.1}}
+.hero .frame{animation:frameReveal 1.3s both}
+@keyframes frameReveal{from{opacity:0;transform:translateY(35px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style></head>
+<body class="locked">
+<div class="intro" id="intro">
+  <div class="intro-inner">
+    <p class="intro-kicker">لديكم دعوة خاصة</p>
+    <h1 class="intro-names">كريم & مريم</h1>
+    <button class="envelope-button" id="openInvite" aria-label="افتح الدعوة">
+      <span class="envelope">
+        <span class="envelope-letter">دعوة زفافنا ❤️</span>
+        <span class="flap"></span>
+        <span class="seal">♥</span>
+      </span>
+    </button>
+    <p class="tap-hint">اضغط على الظرف لفتح الدعوة</p>
+  </div>
+</div>
+<section class="hero"><main class="frame">
+<div class="eyebrow">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+<div class="names">كريم <span class="amp">&</span> مريم</div>
+<p class="subtitle">حكاية حب.. وبداية عمر</p><div class="rule"></div>
+<p class="invite">بكل الحب والفرحة، يسعدنا دعوتكم لمشاركتنا أجمل ليلة في حياتنا<br>وجودكم هو أجمل هدية لنا ❤️</p>
+<div class="date">الخميس · 12 نوفمبر 2026</div>
+<div class="details"><div class="detail"><small>موعد الحفل</small><strong>8:00 مساءً</strong></div><div class="detail"><small>المناسبة</small><strong>حفل الزفاف</strong></div></div>
+<div class="countdown" id="countdown"><div class="unit"><b>--</b><span>يوم</span></div><div class="unit"><b>--</b><span>ساعة</span></div><div class="unit"><b>--</b><span>دقيقة</span></div><div class="unit"><b>--</b><span>ثانية</span></div></div>
+</main></section>
+<section class="venue"><h2>نستناكم فين؟</h2><div class="venue-name">قاعة السرايا – صلاح سالم</div><p>خلف مسجد الرحمن الرحيم، شارع صلاح سالم<br>القاهرة، مصر</p><a class="map" href="https://www.google.com/maps/search/?api=1&query=Al+Saraya+Hall+Salah+Salem+Cairo" target="_blank" rel="noopener">افتح الموقع على الخريطة ↗</a><p class="note">تفاصيل القاعة والموعد في هذه الدعوة تجريبية، ويجب تأكيد الحجز مع القاعة قبل إرسال الدعوة للمدعوين.</p></section>
+<footer class="footer">فرحتنا تكمل بوجودكم · كريم & مريم</footer>
+<script>
+const target=new Date('2026-11-12T20:00:00+02:00').getTime();
+function tick(){let d=target-Date.now();const el=document.getElementById('countdown');if(d<=0){el.innerHTML='<div class="invite">الليلة ليلتنا ❤️</div>';return}const vals=[Math.floor(d/86400000),Math.floor(d%86400000/3600000),Math.floor(d%3600000/60000),Math.floor(d%60000/1000)];el.innerHTML=vals.map((v,i)=>`<div class="unit"><b>${String(v).padStart(2,'0')}</b><span>${['يوم','ساعة','دقيقة','ثانية'][i]}</span></div>`).join('')}
+tick();setInterval(tick,1000);
+
+const openBtn=document.getElementById('openInvite');
+const intro=document.getElementById('intro');
+openBtn.addEventListener('click',()=>{
+  if(openBtn.classList.contains('open')) return;
+  openBtn.classList.add('open');
+  const symbols=['✿','❀','♥','✧'];
+  for(let i=0;i<28;i++){
+    const petal=document.createElement('span');
+    petal.className='petal';
+    petal.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    petal.style.left=Math.random()*100+'vw';
+    petal.style.fontSize=(12+Math.random()*18)+'px';
+    petal.style.animationDuration=(5+Math.random()*6)+'s';
+    petal.style.animationDelay=(Math.random()*1.5)+'s';
+    petal.style.setProperty('--drift',(Math.random()*180-90)+'px');
+    document.body.appendChild(petal);
+    setTimeout(()=>petal.remove(),12500);
+  }
+  setTimeout(()=>{
+    intro.classList.add('gone');
+    document.body.classList.remove('locked');
+  },1500);
+});
+</script></body></html>
